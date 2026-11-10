@@ -4,6 +4,10 @@ A completely rebuilt static website for Fremont High School Math Club, with an a
 
 **Meetings: Thursday lunch, Mr. Epperson’s room, Room 93.**
 
+**Website:** https://avimalhotra853.github.io/fhs-math-club/
+
+**Repository:** https://github.com/avimalhotra853/fhs-math-club
+
 ## Run the website
 
 From this project folder:
