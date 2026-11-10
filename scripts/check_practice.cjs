@@ -1,0 +1,18 @@
+const assert=require('node:assert/strict');
+const core=require('../site/assets/js/practice-core.js');
+const items=['one','two','three'].map(id=>({id,p:'Real statement '+id,src:'Test'}));
+let session=core.create(items,5,1000);
+core.resume(session,1000);core.tick(session,11000);
+assert.equal(session.remaining,290);assert.equal(session.spent.one,10);
+core.pause(session,11000);core.tick(session,100000);
+assert.equal(session.remaining,290,'Paused time must not count');
+session.index=1;core.resume(session,100000);core.tick(session,120000);core.assess(session,'review');
+assert.equal(session.spent.two,20);assert.equal(session.outcomes.two,'review');
+core.pause(session,120000);session.index=2;core.resume(session,200000);core.assess(session,'solved');session.revealed.three=true;core.finish(session,205000);
+const stats=core.stats(session);assert.equal(stats.used,35);assert.equal(stats.review,1);assert.equal(stats.solved,1);assert.equal(stats.unmarked,1);assert.equal(stats.viewed,1);assert.equal(Object.values(session.spent).reduce((a,b)=>a+b,0),stats.used);
+const restored=core.restore(JSON.parse(JSON.stringify(session)),300000);assert.equal(restored.status,'finished');assert.equal(restored.running,false);assert.equal(restored.remaining,265);
+let expired=core.create(items,1,0);core.resume(expired,0);core.tick(expired,70000);assert.equal(expired.remaining,0);assert.equal(expired.running,false);assert.equal(core.stats(expired).solved,0,'Time expiry must never invent solved outcomes');
+let interrupted=core.create(items,5,1000);core.resume(interrupted,1000);interrupted=core.restore(JSON.parse(JSON.stringify(interrupted)),11000);assert.equal(interrupted.remaining,290);assert.equal(interrupted.running,false,'Restored sessions wait for an explicit resume');
+assert.equal(core.restore({version:1,items:[]}),null);assert.equal(core.restore({...session,index:99}),null);assert.equal(core.restore({...session,remaining:999999}),null);
+assert.throws(()=>core.create([items[0],items[0]],5));assert.throws(()=>core.create(items,0));assert.throws(()=>core.assess(session,'correct'));
+console.log('PASS: practice timer expiry, pause/resume, per-problem time, self-assessment, restoration, invalid sessions, and summary counts.');

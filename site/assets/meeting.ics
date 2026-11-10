@@ -1,0 +1,11 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//FHS Math Club//Meeting reminder//EN
+BEGIN:VTODO
+UID:fhs-math-club-thursday-lunch-room93
+DTSTAMP:20261019T000000Z
+SUMMARY:FHS Math Club — Thursday lunch
+LOCATION:Mr. Epperson's room — Room 93
+DESCRIPTION:Come to Math Club on Thursday at lunch. Set a reminder for your school's lunch time.
+END:VTODO
+END:VCALENDAR

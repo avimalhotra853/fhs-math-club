@@ -1,0 +1,73 @@
+[hidden] { display: none !important; }
+.practice-toolbar-actions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; justify-content: flex-end; }
+#build-set { color: var(--red); border-color: #e7cbd2; background: #fff6f7; }
+#timer-custom { width: 68px; min-height: 32px; padding: 6px; font-size: 11px; border: 1px solid var(--line); border-radius: 7px; }
+.timer-actions { flex-wrap: wrap; }
+.active-set-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; border: 1px solid #ead3da; border-radius: 12px; padding: 15px; background: #fff7f8; margin: 18px 0; }
+.active-set-bar > div { display: flex; flex-direction: column; gap: 4px; margin-right: auto; }
+.active-set-bar strong { font-size: 12px; font-weight: 600; }
+.active-set-bar > div > span { font-size: 10px; color: #92777f; }
+[data-set-clock] { font-variant-numeric: tabular-nums; font-family: var(--display, var(--sans)); font-size: 23px; color: var(--red); font-weight: 600; }
+.active-set-bar .button { font-size: 10px; min-height: 32px; padding: 8px 11px; }
+.active-set-bar .text-link { font-size: 10px; }
+.set-question-panel { background: #fff7f8; border: 1px solid #edd5dd; border-radius: 12px; padding: 17px; margin: 0 0 25px; }
+.set-panel-header { display: flex; flex-wrap: wrap; gap: 13px; align-items: center; }
+.set-panel-header > div { display: flex; flex-direction: column; gap: 5px; margin-right: auto; }
+.set-panel-header strong { font-size: 13px; font-weight: 550; }
+.set-panel-header .button { padding: 7px 11px; min-height: 33px; font-size: 10px; }
+.set-panel-header .text-link { font-size: 10px; }
+.set-problem-nav { display: flex; flex-wrap: wrap; gap: 6px; margin: 18px 0; }
+.set-problem-nav button { width: 29px; height: 29px; border: 1px solid #e7d9de; background: #fff; border-radius: 7px; font-size: 10px; }
+.set-problem-nav .current { outline: 2px solid #af2d49; outline-offset: 2px; }
+.set-problem-nav .solved { background: #e9f1ec; color: #497254; border-color: #d5e4db; }
+.set-problem-nav .review { background: #fff0d9; color: #98723c; border-color: #f3dfbf; }
+.set-problem-nav .skipped { background: #eae9ec; color: #8b8891; }
+.set-outcomes { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; padding-top: 14px; border-top: 1px solid #eedee3; }
+.set-outcomes > span { font-size: 10px; color: #a28d94; margin-right: auto; }
+.set-outcomes button { padding: 8px 12px; font-size: 10px; background: #fff; border: 1px solid #e8dbe0; border-radius: 7px; }
+.set-outcomes button.selected { color: #a72644; background: #f9e8ed; border-color: #d9a5b4; }
+.set-navigation { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-top: 18px; }
+.set-navigation .text-link { font-size: 10px; }
+#set-solution-note { font-size: 9px; color: #aa8c96; }
+#practice-dialog { width: min(680px,calc(100% - 32px)); }
+.set-description { font-size: 12px; color: #8f8182; line-height: 1.9; }
+.set-filter-context { display: flex; flex-wrap: wrap; gap: 7px; margin: 20px 0; }
+.set-filter-context span { background: #f7f3f1; border: 1px solid #eee5e0; border-radius: 6px; padding: 6px 9px; color: #968780; font-size: 10px; }
+.set-form-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 24px 0; }
+.set-form-fields label { display: flex; flex-direction: column; gap: 9px; color: #796c6c; font-size: 11px; }
+.set-form-fields input { min-height: 38px; width: 100%; border: 1px solid #e9e1dd; border-radius: 7px; padding: 9px 11px; color: #514747; }
+.set-form-fields small { font-size: 9px; color: #a79790; }
+.set-checkbox { display: flex; gap: 10px; align-items: center; font-size: 11px; color: #8c7b7c; margin: 14px 0; }
+.set-checkbox input { accent-color: #af2c49; }
+#set-form-message { font-size: 11px; color: #a64960; margin: 20px 0; }
+#set-start { margin-top: 8px; }
+.set-summary-metrics { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 9px; margin: 24px 0; }
+.set-summary-metrics > div { background: #faf6f4; border: 1px solid #eee5df; border-radius: 12px; padding: 16px 10px; text-align: center; }
+.set-summary-metrics strong { display: block; font: 650 28px var(--display,var(--sans)); color: #9d314a; }
+.set-summary-metrics span { font-size: 9px; color: #a18b83; display: block; margin-top: 5px; }
+.set-summary-list { border: 1px solid #eee6e2; border-radius: 11px; overflow: hidden; }
+.set-summary-row { display: flex; align-items: center; justify-content: space-between; gap: 15px; width: 100%; background: #fff; padding: 16px 14px; border: 0; border-bottom: 1px solid #f0e9e5; text-align: left; }
+.set-summary-row:last-child { border-bottom: 0; }
+.set-summary-row:hover { background: #fffaf8; }
+.set-summary-row strong { display: block; font-size: 11px; font-weight: 550; line-height: 1.7; }
+.set-summary-row small { display: block; color: #aa9892; font-size: 9px; margin-top: 5px; }
+.set-outcome-label { font-size: 9px; color: #a18d8b; white-space: nowrap; }
+.set-outcome-label.solved { color: #65866c; }.set-outcome-label.review { color: #b3813d; }
+@media (max-width:550px) {
+ .practice-toolbar { flex-wrap: wrap; }.practice-toolbar > div:first-child { flex-basis:100%; }
+ .practice-toolbar-actions { justify-content:flex-start; gap:7px; }
+ .practice-toolbar .practice-toolbar-actions .button { font-size:10px; padding:9px 12px; }
+ .set-question-panel { padding:13px; }.set-panel-header { gap:10px; }.set-panel-header .set-clock { font-size:21px; }
+ .set-panel-header .text-link { margin-left:auto; }.set-outcomes > span { flex-basis:100%; }
+ .set-outcomes button { flex:1; padding:8px 9px; }.set-problem-nav button { width:27px; height:27px; }
+ .set-form-fields { gap:12px; }.set-summary-metrics { grid-template-columns:repeat(2,minmax(0,1fr)); }
+ .set-summary-row { gap:10px; padding:13px 10px; }.set-summary-row strong { font-size:10px; }
+ .active-set-bar { gap:11px; }.active-set-bar > div { flex-basis:60%; }
+ .active-set-bar > .button { margin-right:auto; }.set-clock { font-size:21px; }
+}
+@media print { #set-question-panel { display:none!important; } }
+.set-summary-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 22px; margin-top: 22px; }
+.set-summary-actions .text-link { color: #a28c85; font-size: 10px; }
+.set-form-fields { grid-template-columns: repeat(2,minmax(0,1fr)); }
+.set-form-fields label, .set-form-fields input { min-width: 0; }
+.set-filter-context span { max-width: 100%; overflow-wrap: anywhere; }

@@ -1,0 +1,19 @@
+# Local environments and caches
+.venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+.env
+.env.*
+!.env.example
+.codex/
+.agents/
+
+# Source downloads can be fetched again; deploy-ready data is in site/assets/data.
+/data/
+/aops_html/
+
+# Retired Algolia exports are not used by the website.
+/site/assets/data/algolia_records.json
+/site/assets/data/algolia_upload/
+/site/assets/js/algolia-config.js
